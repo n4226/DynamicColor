@@ -24,7 +24,7 @@
  *
  */
 
-#if os(iOS) || os(tvOS) || os(watchOS)
+#if os(iOS) || os(visionOS) || os(tvOS) || os(watchOS)
   import UIKit
 #elseif os(OSX)
   import AppKit

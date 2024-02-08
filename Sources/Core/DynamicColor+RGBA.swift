@@ -24,7 +24,7 @@
  *
  */
 
-#if os(iOS) || os(tvOS) || os(watchOS)
+#if os(iOS) || os(visionOS) || os(tvOS) || os(watchOS)
   import UIKit
 #elseif os(OSX)
   import AppKit
@@ -57,7 +57,7 @@ public extension DynamicColor {
   final func toRGBAComponents() -> (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) {
     var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
 
-    #if os(iOS) || os(tvOS) || os(watchOS)
+    #if os(iOS) || os(visionOS) || os(tvOS) || os(watchOS)
       getRed(&r, green: &g, blue: &b, alpha: &a)
 
       return (r, g, b, a)
@@ -72,7 +72,7 @@ public extension DynamicColor {
     #endif
   }
 
-  #if os(iOS) || os(tvOS) || os(watchOS)
+  #if os(iOS) || os(visionOS) || os(tvOS) || os(watchOS)
   /**
    The red component as CGFloat between 0.0 to 1.0.
    */

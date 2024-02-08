@@ -24,7 +24,7 @@
  *
  */
 
-#if os(iOS) || os(tvOS) || os(watchOS)
+#if os(iOS) || os(visionOS) || os(tvOS) || os(watchOS)
   import UIKit
 #elseif os(OSX)
   import AppKit
@@ -45,7 +45,7 @@ extension DynamicColor {
     var s: CGFloat = 0.0
     var b: CGFloat = 0.0
 
-    #if os(iOS) || os(tvOS) || os(watchOS)
+    #if os(iOS) || os(visionOS) || os(tvOS) || os(watchOS)
       getHue(&h, saturation: &s, brightness: &b, alpha: nil)
 
       return (h: h, s: s, b: b)
@@ -63,7 +63,7 @@ extension DynamicColor {
     #endif
   }
 
-  #if os(iOS) || os(tvOS) || os(watchOS)
+  #if os(iOS) || os(visionOS) || os(tvOS) || os(watchOS)
     /**
      The hue component as CGFloat between 0.0 to 1.0.
      */
